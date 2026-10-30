@@ -1,6 +1,6 @@
 /* ===== Yahan apni settings badlein ===== */
 const FRIEND = "Hina";
-const FROM   = "Tumhari Dost";   // apna naam yahan likh dein
+const FROM   = "Tumhara Dost : Sufyan Shaikh";   // apna naam yahan likh dein
 /* ======================================= */
 
 const $ = id => document.getElementById(id);
