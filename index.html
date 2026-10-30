@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday Hina 👑</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<div id="prog"></div>
+<div id="floaters"></div>
+<canvas id="confetti"></canvas>
+
+<!-- Splash Screen -->
+<div id="splash">
+  <div class="gift">🎁</div>
+  <h2 id="spName">Hina, tumhare liye</h2>
+  <p>Ek royal surprise hai ✨</p>
+  <button class="openbtn" id="openBtn">Tap to Open 👑</button>
+</div>
+
+<!-- Dark fireworks intro -->
+<div id="night">
+  <div id="stars"></div>
+  <canvas id="fw"></canvas>
+  <div class="nt" id="nt">
+    <div class="c">👑</div>
+    <div class="a">Happy Birthday</div>
+    <div class="b" id="ntName">Hina</div>
+  </div>
+  <button id="skip">Skip ›</button>
+</div>
+
+<main>
+  <!-- 1 HERO -->
+  <section id="hero">
+    <div class="crown reveal">👑</div>
+    <div class="tag reveal">31 October</div>
+    <h1 class="hb reveal">Happy Birthday</h1>
+    <div class="name reveal" id="heroName">Hina</div>
+    <div class="date reveal">🎂 Aaj ka din <b>sirf tumhara</b> hai 🎂</div>
+    <div class="photo reveal" id="photoBox">
+      <div class="in" id="photoIn">
+        <div class="ph" id="photoPh">H</div>
+        <img src="photo.jpg" alt="Hina" id="photoImg" style="display:none"
+             onload="this.style.display='block';var p=document.getElementById('photoPh');if(p)p.remove()" onerror="this.remove()">
+      </div>
+    </div>
+    <div class="scroll">scroll karein ↓</div>
+  </section>
+
+  <!-- 2 CAKE -->
+  <section id="cakeSec">
+    <div class="chap reveal">Chapter I</div>
+    <h3 class="t reveal">Make a wish</h3>
+    <div class="orn reveal">✦ ❖ ✦</div>
+    <div class="cakewrap reveal" id="cake">
+      <svg id="cakeSvg" viewBox="0 0 320 350" xmlns="http://www.w3.org/2000/svg"></svg>
+      <span class="spark" style="left:2%;top:22%;animation-delay:.2s">✨</span>
+      <span class="spark" style="right:0;top:34%;animation-delay:1.1s">✨</span>
+      <span class="spark" style="left:8%;top:62%;animation-delay:1.8s">💫</span>
+      <span class="spark" style="right:6%;top:8%;animation-delay:.7s">⭐</span>
+    </div>
+    <p class="wish reveal" id="wish">Cake par click karke candles bujhao 🕯️</p>
+  </section>
+
+  <!-- 3 WISHES -->
+  <section id="wishes">
+    <div class="chap reveal">Chapter II</div>
+    <h3 class="t reveal">Tumhare liye meri dua</h3>
+    <div class="orn reveal">✦ ❖ ✦</div>
+    <div class="cards">
+      <div class="card glass reveal"><div class="e">🌸</div><h4>Hamesha Muskurati Rehna</h4><p>Hamesha Chehre Par Tazgi Rahe, Muskurata Rahe.</p></div>
+      <div class="card glass reveal"><div class="e">🌙</div><h4>Saare Khwab Poore Hon</h4><p>Jo bhi tum dil mein soch rahi ho, Allah use tumhare liye aasaan kare.</p></div>
+      <div class="card glass reveal"><div class="e">💖</div><h4>Pyaar Aur Khushiyan</h4><p>Tumhari zindagi mein itni khushiyan aayein ke gin na sako.</p></div>
+      <div class="card glass reveal"><div class="e">🦋</div><h4>Meri Pyari Dost</h4><p>Achy Dost Acha Waqt Hote Hai, Aur Waqt Acha ho to Zindagi Haseen Lagti Hai.</p></div>
+      <div class="card glass reveal"><div class="e">🌟</div><h4>Kamyabi Qadam Choome</h4><p>Jis raaste par chalo, wahan kamyabi tumhara intezar kar rahi ho.</p></div>
+      <div class="card glass reveal"><div class="e">🕊️</div><h4>Sukoon Aur Salamati</h4><p>Dil ko sukoon, ghar mein barkat aur zindagi mein hamesha aman rahe.</p></div>
+    </div>
+  </section>
+
+  <!-- 4 ROYAL TITLES -->
+  <section id="royal">
+    <div class="chap reveal">Chapter III</div>
+    <h3 class="t reveal">Hina, The Queen</h3>
+    <div class="orn reveal">✦ ❖ ✦</div>
+    <div class="titles">
+      <div class="title glass reveal"><div class="ic">👑</div><h4>Queen of Hearts</h4><p>Acha Dil Hona, Aur Usy Logo Ke Sath Acha Raknha, Ye Khasiyat Sub Me Nahi Hoti.</p></div>
+      <div class="title glass reveal"><div class="ic">💎</div><h4>The Rarest Gem</h4><p>Aese Dost kam Hote Hai Zindagi Me, Shukria.</p></div>
+      <div class="title glass reveal"><div class="ic">🌹</div><h4>Kindest Soul</h4><p>Dil Acha Hona, To Sath chalne Wale Kabhi Nahi Chor Kar Jate.</p></div>
+      <div class="title glass reveal"><div class="ic">🦢</div><h4>Grace &amp; Elegance</h4><p>Wo Jo Andaz Hai, Koshish Karna Hamesha Rahe.</p></div>
+    </div>
+  </section>
+
+  <!-- 5 TIMELINE -->
+  <section id="story">
+    <div class="chap reveal">Chapter IV</div>
+    <h3 class="t reveal">Hamari Kahani</h3>
+    <div class="orn reveal">✦ ❖ ✦</div>
+    <div class="tl">
+      <div class="tli reveal"><div class="dot">🌱</div><div class="box glass"><h4>Pehli Bat : Aangan Lawn </h4><p>Wo Din Jab Mujhe Andaza Nahi Tha Ke Dosti Itni Achi Rahegi.</p></div></div>
+      <div class="tli reveal"><div class="dot">😂</div><div class="box glass"><h4>2025 Ki Salgirah Aur Fozia</h4><p>Fozia Ka Invite Karna, Aur Apse Kuch Lamhe Ki Mulaqat Jo Ke Shayad 3 Sal Bat Karne Ke Bad Apse Hoie, Achi Rahi.</p></div></div>
+      <div class="tli reveal"><div class="dot">🤝</div><div class="box glass"><h4>Acha Dost</h4><p>Zindagi Me Bhut Hi Kam Aesa Hota Hai, Ke Ap Kisi insan ke anjane me dost ban jaie, aur mulaqat shayad 3 sal bad ho.</p></div></div>
+      <div class="tli reveal"><div class="dot">💫</div><div class="box glass"><h4>Aaj Aur Hamesha</h4><p>Ye safar yunhi chalta rahe, Par Is Sal Salgirah me Shikart Nahi Ho Paie, Warna Zaror mil Kar Wish Karta Apko.</p></div></div>
+    </div>
+  </section>
+
+  <!-- 6 GALLERY -->
+  <section id="gallery">
+    <div class="chap reveal">Chapter V</div>
+    <h3 class="t reveal">Yaadon Ki Gallery</h3>
+    <div class="orn reveal">✦ ❖ ✦</div>
+    <div class="gal" id="gal"></div>
+  </section>
+
+  <!-- 7 DECREE -->
+  <section id="decreeSec">
+    <div class="chap reveal">Chapter VI</div>
+    <h3 class="t reveal">Royal Decree</h3>
+    <div class="orn reveal">✦ ❖ ✦</div>
+    <div class="decree reveal">
+      <h4>Shahi Farman</h4>
+      <div class="sub">Kingdom of Friendship</div>
+      <ol>
+        <li><b>I.</b> Aaj ke din har pareshani door rahe aur sirf sukoon ho.</li>
+  <li><b>II.</b> Is khubsurat din ki sari khushiyan aur pehla haq sirf Hina ka hai.</li>
+  <li><b>III.</b> Allah kare aapki har nek dua aur har khwab aaj qabool ho.</li>
+  <li><b>IV.</b> Aapke chehre par yeh pyari si muskurahat hamesha bani rahe.</li>
+  <li><b>V.</b> Yeh dosti aur aisi nek duaein hamesha salamat rahein.</li>
+      </ol>
+      <div class="seal">♛</div>
+    </div>
+  </section>
+
+  <!-- 8 LETTER -->
+  <section id="letterSec">
+    <div class="chap reveal">Chapter VII</div>
+    <h3 class="t reveal">Dil Ki Baat</h3>
+    <div class="orn reveal">✦ ❖ ✦</div>
+    <div class="letter glass reveal">
+      <p><B>Dear Hina,</B></p>
+<p>Humari yeh dosti taqriban teen saal purani hai aur baatein shuru huey paanch saal ho chuke hain. Shuruwat 'Chez Angan' book karne ke ek silsile se hui thi, aur phir ahista-ahista yeh safar ek khoobsurat dosti mein badal gaya.</p>
+<p>Halanki is saal main salgirah par nahi aa paya, warna dil se chahta tha ke mil kar khud salgirah wish karun aur yeh koshish karta ke har saal salgirah par milne ka yeh tasalsul aise hi bana rahe.</p>
+<p>Halanki teen saal ki dosti ke baad saal 2025 mein tumhari birthday par jo hamari pehli mulaqat hui thi, woh mere liye behad khaas aur yaadgar thi, aur ek behtareen insan ke sath woh waqt bohot acha guzra tha.</p>
+<p>Aaj tumhara din hai, aur Allah se dua hai ke yeh naya saal tumhare liye dher saari khushiyan, roshni aur naye kamyab safar lekar aaye.</p>
+
+      <div class="sig" id="from">Tumhara Dost | Sufyan Shaikh</div>
+    </div>
+  </section>
+
+  <!-- 9 FINALE -->
+  <section class="fin" id="fin">
+    <div class="crown reveal">👑</div>
+    <div class="big reveal">Happy Birthday<br><span id="finName">Hina</span></div>
+    <div class="orn reveal" style="margin-top:14px">✦ ❖ ✦</div>
+    <button class="replay reveal" id="replay">🎆 Patakhe dobara dekhein</button>
+  </section>
+
+  <footer>Made with Dil Se for Hina &nbsp;•&nbsp; 31 October</footer>
+</main>
+
+<!-- Simple Clean Music Player (No Upload Button) -->
+<div id="player">
+  <div class="eq"><i></i><i></i><i></i></div>
+  <div class="nm" id="songName">Music</div>
+  <button id="pp" title="Play / Pause">⏸</button>
+</div>
+
+<!-- Yahan apni audio file ka naam change karein (jaise mysong.mp3) -->
+<audio id="audio" src="music.mp3" loop preload="auto"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
